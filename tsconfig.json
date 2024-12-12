@@ -1,0 +1,24 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "removeComments": false,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "target": "ES2015",
+        "baseUrl": ".",
+        "outDir": "dist",
+        "rootDir": "./src",
+        "sourceMap": true,
+        "declaration": true
+    },
+    "include": ["./src"],
+    "exclude": ["__tests__"]
+}
