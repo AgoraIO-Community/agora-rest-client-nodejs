@@ -53,6 +53,7 @@ import {
   StartResourceRes,
   RecordingRequestChannelTypeEnum,
   QueryMixHLSAndMP4RecordingResourceRes,
+  StopResourceRes,
 } from "agora-rest-client";
 
 const appId = "";
@@ -94,7 +95,7 @@ if (
     appId,
     credential,
     // Specify the region where the server is located.
-    // Optional values are CN, NA, EU, AP, and the client will automatically
+    // Optional values are CN, US, EU, AP, and the client will automatically
     // switch to use the best domain name according to the configured region
     domainArea: DomainArea.CN,
   });
@@ -189,8 +190,9 @@ if (
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   // Stop resource
+  let stopResourceRes: StopResourceRes;
   try {
-    await cloudRecordingClient
+    stopResourceRes = await cloudRecordingClient
       .mixScenario()
       .stop(
         cname,
@@ -204,7 +206,7 @@ if (
     return;
   }
 
-  console.info(`stop resource success,res:${JSON.stringify(startResourceRes)}`);
+  console.info(`stop resource success,res:${JSON.stringify(stopResourceRes)}`);
 })();
 ```
 
