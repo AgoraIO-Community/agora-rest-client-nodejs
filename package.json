@@ -1,6 +1,6 @@
 {
     "name": "agora-rest-client",
-    "version": "0.0.1-6",
+    "version": "0.1.0",
     "description": "Node.js REST client for Agora",
     "homepage": "https://github.com/AgoraIO-Community/agora-rest-client-nodejs",
     "main": "dist/index.js",
