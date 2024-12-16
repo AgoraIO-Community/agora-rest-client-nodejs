@@ -3,6 +3,7 @@
 <p>
 <img alt="NPM Version" src="https://img.shields.io/npm/v/agora-rest-client">
 <img alt="GitHub License" src="https://img.shields.io/github/license/AgoraIO-Community/agora-rest-client-nodejs">
+<a href="https://github.com/AgoraIO-Community/agora-rest-client-nodejs/actions/workflows/gitee-sync.yml"><img alt="gitee-sync" src="https://github.com/AgoraIO-Community/agora-rest-client-nodejs/actions/workflows/gitee-sync.yml/badge.svg?branch=main"></a>
 <img alt="GitHub" src="https://img.shields.io/github/v/release/AgoraIO-Community/agora-rest-client-nodejs">
 <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues-pr/AgoraIO-Community/agora-rest-client-nodejs">
 </p>
