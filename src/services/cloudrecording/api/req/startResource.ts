@@ -8,17 +8,11 @@ export interface StartResourceReq {
 
 export interface StartClientRequest {
     token?: string
-    appsCollection?: AppsCollection
     recordingConfig?: RecordingConfig
-    transcodeOptions?: TranscodeOptions
     recordingFileConfig?: RecordingFileConfig
     snapshotConfig?: SnapshotConfig
     storageConfig?: StorageConfig
     extensionServiceConfig?: ExtensionServiceConfig
-}
-
-export interface AppsCollection {
-    combinationPolicy?: string
 }
 
 export interface RecordingConfig {
@@ -67,26 +61,6 @@ export interface BackgroundConfig {
     uid?: string
     image_url?: string
     render_mode?: number
-}
-
-export interface TranscodeOptions {
-    container?: Container
-    transConfig?: TransConfig
-    audio?: Audio
-}
-
-export interface Container {
-    format?: string
-}
-
-export interface TransConfig {
-    transMode?: string
-}
-
-export interface Audio {
-    sampleRate?: string
-    bitrate?: string
-    channels?: string
 }
 
 export interface RecordingFileConfig {

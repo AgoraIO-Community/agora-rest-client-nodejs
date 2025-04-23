@@ -21,16 +21,13 @@ export class IndividualScenarioClient {
     async acquire(
         cname: string,
         uid: string,
-        enablePostpone: boolean,
         clientRequest: AcquireIndividualResourceClientReq,
     ): Promise<AcquireResourceRes> {
-        const scene = enablePostpone ? 2 : 0
-
         const requestPayload: AcquireResourceReq = {
             cname,
             uid,
             clientRequest: {
-                scene,
+                scene: 0,
                 resourceExpiredHour: clientRequest.resourceExpiredHour,
                 excludeResourceIds: clientRequest.excludeResourceIds,
                 regionAffinity: clientRequest.regionAffinity,
@@ -40,9 +37,7 @@ export class IndividualScenarioClient {
         if (clientRequest.startParameter) {
             requestPayload.clientRequest.startParameter = {
                 token: clientRequest.startParameter.token,
-                appsCollection: clientRequest.startParameter.appsCollection,
                 recordingConfig: clientRequest.startParameter.recordingConfig,
-                transcodeOptions: clientRequest.startParameter.transcodeOptions,
                 recordingFileConfig: clientRequest.startParameter.recordingFileConfig,
                 snapshotConfig: clientRequest.startParameter.snapshotConfig,
                 storageConfig: clientRequest.startParameter.storageConfig,
@@ -88,9 +83,7 @@ export class IndividualScenarioClient {
             cname,
             clientRequest: {
                 token: clientRequest.token,
-                appsCollection: clientRequest.appsCollection,
                 recordingConfig: clientRequest.recordingConfig,
-                transcodeOptions: clientRequest.transcodeOptions,
                 recordingFileConfig: clientRequest.recordingFileConfig,
                 snapshotConfig: clientRequest.snapshotConfig,
                 storageConfig: clientRequest.storageConfig,

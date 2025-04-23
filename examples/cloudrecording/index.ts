@@ -107,15 +107,6 @@ async function runIndividualService(scene: string): Promise<void> {
         case 'recording_and_snapshot':
             await individualRecordingService.runRecordingAndSnapshot(token, storageConfig)
             break
-        case 'recording_and_postpone_transcoding':
-            await individualRecordingService.runRecordingAndPostponeTranscoding(
-                token,
-                storageConfig,
-            )
-            break
-        case 'recording_and_audio_mix':
-            await individualRecordingService.runRecordingAndAudioMix(token, storageConfig)
-            break
         default:
             throw new Error('Invalid individual_scene')
     }
